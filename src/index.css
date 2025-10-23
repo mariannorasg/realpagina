@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+body {
+  @apply bg-brand-dark text-brand-text-main;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3B82F6;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #60a5fa;
+}
+
+/* ===== Logo marquee ===== */
+@keyframes logo-marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* recorre la mitad porque duplicamos la lista */
+}
+
+.logo-marquee-track {
+  animation: logo-marquee 35s linear infinite;
+  will-change: transform;
+}
+
+.logo-marquee-paused {
+  animation-play-state: paused;
+}
+
+/* Gradientes “fade” en los bordes (opcional) */
+.logo-marquee-fade::before,
+.logo-marquee-fade::after {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 64px;          /* borde de desvanecido */
+  pointer-events: none;
+}
+.logo-marquee-fade::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(12,17,28,1), rgba(12,17,28,0));
+}
+.logo-marquee-fade::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(12,17,28,1), rgba(12,17,28,0));
+}
+
+/* Ajustes responsive sutiles */
+@media (max-width: 768px) {
+  .logo-marquee-track { animation-duration: 28s; }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+.pause-marquee {
+  animation-play-state: paused;
+}
