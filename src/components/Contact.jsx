@@ -106,15 +106,28 @@ const Contact = () => {
                   </div>
                 </motion.div>
 
-                <motion.div whileHover={{ x: 10 }} className="flex items-center space-x-4 text-brand-text-main">
-                  <div className="w-12 h-12 bg-brand-accent/10 rounded-full flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-brand-accent" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-brand-text-secondary">WhatsApp</p>
-                    <p className="font-semibold text-brand-beige">+54 299 549 7296</p>
-                  </div>
-                </motion.div>
+               <motion.div
+  whileHover={{ x: 10 }}
+  className="flex items-center space-x-4 text-brand-text-main cursor-pointer"
+>
+  <a
+    href="https://wa.me/5492995497296?text=Hola!%20Vengo%20de%20la%20web%20de%20Real%20Digital%20y%20quiero%20asesoramiento"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center space-x-4"
+  >
+    <div className="w-12 h-12 bg-brand-accent/10 rounded-full flex items-center justify-center hover:bg-brand-accent/20 transition">
+      <Phone className="w-6 h-6 text-brand-accent" />
+    </div>
+    <div>
+      <p className="text-sm text-brand-text-secondary">WhatsApp</p>
+      <p className="font-semibold text-brand-beige hover:text-brand-accent transition">
+        +54 299 549 7296
+      </p>
+    </div>
+  </a>
+</motion.div>
+
 
                 <motion.div whileHover={{ x: 10 }} className="flex items-center space-x-4 text-brand-text-main">
                   <div className="w-12 h-12 bg-brand-accent/10 rounded-full flex items-center justify-center">
