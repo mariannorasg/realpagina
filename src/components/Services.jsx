@@ -66,7 +66,7 @@ const Services = () => {
           </h2>
         </motion.div>
 
-        {/* GRID DE SERVICIOS */}
+        {/* GRID DE SERVICIOS (cards pequeñas) */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <motion.div
@@ -95,7 +95,7 @@ const Services = () => {
           ))}
         </div>
 
-        {/* SUB-BLOQUE: DISEÑO GRÁFICO (FLYERS + IDENTIDAD) */}
+        {/* PAQUETES DESTACADOS: IZQUIERDA = DISEÑO GRÁFICO (dos piezas dentro) / DERECHA = MANEJO DE REDES */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -103,66 +103,118 @@ const Services = () => {
           className="mt-16"
         >
           <h3 className="text-3xl font-bold text-center mb-8 text-brand-beige">
-            Diseño gráfico: <span className="text-brand-accent">paquetes y piezas</span>
+            Paquetes: <span className="text-brand-accent">diseño gráfico y redes</span>
           </h3>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {/* Flyers publicitarios */}
+            {/* --- BLOQUE IZQUIERDO: DISEÑO GRÁFICO (IDENTIDAD + FLYERS) --- */}
             <div className="bg-brand-dark p-8 rounded-2xl border border-blue-900/50 hover:border-brand-accent/50 transition-all duration-300 shadow-lg">
-              <div className="flex items-center gap-3 mb-4">
+              <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 rounded-xl bg-brand-accent/10 flex items-center justify-center">
-                  <Film className="w-6 h-6 text-brand-accent" />
+                  <Palette className="w-6 h-6 text-brand-accent" />
                 </div>
-                <div className="w-12 h-12 rounded-xl bg-brand-accent/10 flex items-center justify-center">
-                  <ImageIcon className="w-6 h-6 text-brand-accent" />
-                </div>
+                <h4 className="text-2xl font-semibold text-brand-beige">Diseño gráfico</h4>
               </div>
 
-              <h4 className="text-2xl font-semibold text-brand-beige mb-2">
-                Flyers publicitarios (imagen o video)
-              </h4>
-              <p className="text-brand-text-secondary mb-6">
-                Piezas para redes, campañas o promos. Formatos optimizados y entrega lista para publicar.
-              </p>
-
-              <div className="flex items-baseline gap-2 mb-6">
-                <span className="text-4xl font-bold text-brand-accent">$15.000</span>
-                <span className="text-sm text-brand-text-secondary">por pieza</span>
+              {/* Identidad de marca */}
+              <div className="rounded-xl border border-blue-900/40 p-5 mb-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 rounded-lg bg-brand-accent/10 flex items-center justify-center">
+                    <BadgeCheck className="w-5 h-5 text-brand-accent" />
+                  </div>
+                  <p className="text-xl font-semibold text-brand-beige">
+                    Identidad de marca (paquete completo)
+                  </p>
+                </div>
+                <p className="text-brand-text-secondary mb-4">
+                  Logo y aplicaciones, paleta, tipografías, usos incorrectos, stickers,
+                  perfiles para Instagram/Facebook y mini brand guideline.
+                </p>
+                <div className="flex items-baseline gap-2 mb-4">
+                  <span className="text-3xl font-bold text-brand-accent">$150.000</span>
+                  <span className="text-sm text-brand-text-secondary">ARS</span>
+                </div>
+                <a
+                  href="#contacto"
+                  className="inline-block bg-brand-accent text-white px-5 py-3 rounded-full font-semibold hover:bg-blue-500 transition"
+                >
+                  Consultar identidad
+                </a>
               </div>
 
-              <a
-                href="#contacto"
-                className="inline-block bg-brand-accent text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-500 transition"
-              >
-                Solicitar flyer
-              </a>
+              {/* Flyers publicitarios */}
+              <div className="rounded-xl border border-blue-900/40 p-5">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 rounded-lg bg-brand-accent/10 flex items-center justify-center">
+                    <Film className="w-5 h-5 text-brand-accent" />
+                  </div>
+                  <div className="w-10 h-10 rounded-lg bg-brand-accent/10 flex items-center justify-center">
+                    <ImageIcon className="w-5 h-5 text-brand-accent" />
+                  </div>
+                  <p className="text-xl font-semibold text-brand-beige">
+                    Flyers publicitarios (imagen o video)
+                  </p>
+                </div>
+                <p className="text-brand-text-secondary mb-4">
+                  Piezas para redes, campañas o promos. Formatos optimizados y entrega lista para publicar.
+                </p>
+                <div className="flex items-baseline gap-2 mb-4">
+                  <span className="text-3xl font-bold text-brand-accent">$15.000</span>
+                  <span className="text-sm text-brand-text-secondary">por pieza</span>
+                </div>
+                <a
+                  href="#contacto"
+                  className="inline-block bg-brand-accent text-white px-5 py-3 rounded-full font-semibold hover:bg-blue-500 transition"
+                >
+                  Solicitar flyer
+                </a>
+              </div>
             </div>
 
-            {/* Identidad de marca */}
-            <div className="bg-brand-dark p-8 rounded-2xl border border-blue-900/50 hover:border-brand-accent/50 transition-all duration-300 shadow-lg">
-              <div className="w-12 h-12 rounded-xl bg-brand-accent/10 flex items-center justify-center mb-4">
-                <BadgeCheck className="w-6 h-6 text-brand-accent" />
-              </div>
+            {/* --- BLOQUE DERECHO: MANEJO DE REDES --- */}
+<div className="bg-brand-dark p-8 rounded-2xl border border-blue-900/50 hover:border-brand-accent/50 transition-all duration-300 shadow-lg flex flex-col justify-between">
+  <div>
+    <div className="flex items-center gap-3 mb-6">
+      <div className="w-12 h-12 rounded-xl bg-brand-accent/10 flex items-center justify-center">
+        <Megaphone className="w-6 h-6 text-brand-accent" />
+      </div>
+      <h4 className="text-2xl font-semibold text-brand-beige">
+        Manejo de redes sociales
+      </h4>
+    </div>
 
-              <h4 className="text-2xl font-semibold text-brand-beige mb-2">
-                Identidad de marca (paquete completo)
-              </h4>
-              <p className="text-brand-text-secondary mb-6">
-                Logo y sus aplicaciones, paleta, tipografías, usos incorrectos, stickers, perfil para instagram, facebook y mini brand guideline para comunicar con coherencia.
-              </p>
+    <p className="text-brand-text-secondary mb-6">
+      Gestión integral de tu presencia en <strong>Instagram</strong> y <strong>Facebook</strong> para
+      crecer con contenido constante, diseño profesional y una estrategia que refleja tu marca.
+    </p>
 
-              <div className="flex items-baseline gap-2 mb-6">
-                <span className="text-4xl font-bold text-brand-accent">$150.000</span>
-                <span className="text-sm text-brand-text-secondary">ARS</span>
-              </div>
+    <ul className="space-y-2 text-brand-text-secondary mb-8">
+      <li className="flex items-center gap-2"><span></span> 5 publicaciones semanales</li>
+      <li className="flex items-center gap-2"><span></span> Historias diarias</li>
+      <li className="flex items-center gap-2"><span></span> Diseños personalizados</li>
+      <li className="flex items-center gap-2"><span></span> Reporte mensual de desempeño</li>
+      <li className="flex items-center gap-2"><span></span> Plan de contenidos mensual</li>
+      <li className="flex items-center gap-2"><span></span> Análisis de métricas y recomendaciones</li>
+      <li className="flex items-center gap-2"><span></span> Atención a mensajes y comentarios</li>
+      <li className="flex items-center gap-2"><span></span> Estrategia de crecimiento y presencia activa</li>
+    </ul>
+  </div>
 
-              <a
-                href="#contacto"
-                className="inline-block bg-brand-accent text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-500 transition"
-              >
-                Consultar identidad
-              </a>
-            </div>
+  <div className="mt-auto">
+    <div className="flex items-baseline gap-2 mb-6">
+      <span className="text-4xl font-bold text-brand-accent">$100.000</span>
+      <span className="text-sm text-brand-text-secondary">ARS / mes</span>
+    </div>
+
+    <a
+      href="#contacto"
+      className="inline-block bg-brand-accent text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-500 transition w-full text-center"
+    >
+      Consultar plan
+    </a>
+  </div>
+</div>
+
           </div>
         </motion.div>
       </div>
