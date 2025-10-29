@@ -7,7 +7,7 @@ const Pricing = () => {
   const plans = [
     {
       name: 'Landing',
-      price: '$200.000',
+      price: '$350.000',
       period: 'ARS',
       features: [
         'Diseño Personalizado',
@@ -22,7 +22,7 @@ const Pricing = () => {
     },
     {
       name: 'Completa',
-      price: '$300.000',
+      price: '$500.000',
       period: 'ARS',
       features: [
         'Todo lo del Plan Básico',
@@ -38,7 +38,7 @@ const Pricing = () => {
     },
     {
       name: 'Tienda Online',
-      price: '$450.000',
+      price: '$650.000',
       period: 'ARS',
       features: [
         'Todo lo del Plan Profesional',
