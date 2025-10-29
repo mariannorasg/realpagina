@@ -202,7 +202,7 @@ const Services = () => {
 
   <div className="mt-auto">
     <div className="flex items-baseline gap-2 mb-6">
-      <span className="text-4xl font-bold text-brand-accent">$100.000</span>
+      <span className="text-4xl font-bold text-brand-accent">$130.000</span>
       <span className="text-sm text-brand-text-secondary">ARS / mes</span>
     </div>
 
