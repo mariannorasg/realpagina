@@ -131,7 +131,7 @@ const Services = () => {
                   perfiles para Instagram/Facebook y mini brand guideline.
                 </p>
                 <div className="flex items-baseline gap-2 mb-4">
-                  <span className="text-3xl font-bold text-brand-accent">$150.000</span>
+                  <span className="text-3xl font-bold text-brand-accent">$210.000</span>
                   <span className="text-sm text-brand-text-secondary">ARS</span>
                 </div>
                 <a
